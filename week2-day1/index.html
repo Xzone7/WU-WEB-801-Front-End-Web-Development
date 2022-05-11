@@ -9,12 +9,56 @@
 		<!-- Internal/Emed CSS -->
     <style>
 			header {
-				background-color: tomato;
-				height: 450px;
 				background: url("images/central_park.jpg") 0 -200px no-repeat;
-				background-size: 1500px;
+				background-size: 100%;
 				/* background-position: 0 -200px; */
 				/* background-repeat: no-repeat; */
+				background-color: tomato;
+				height: 350px;
+				padding-left: 125px;
+				padding-top: 100px;
+				font-weight: bold;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			li {
+				list-style-type: none;
+				display: inline;
+				padding: 0 20px;
+			}
+			a {
+				text-decoration: none;
+			}
+			a:link {
+				color: #000; /* before click */
+			}
+			a:visited {
+				color: #818db3; /* after click */
+			}
+			a:hover {
+				color: #333; /* mouse over */
+			}
+			a:active {
+				color: #753a30; /* mouse down */
+			}
+			nav {
+				background-color: rgb(255, 245, 238);
+				height: 50px;
+				text-align: center;
+				padding-top: 2px;
+			}
+			main {
+				height: 400px; /* apply fixed height for demo purpose only */
+			}
+			main h1 { /* contextual selector - parent child */
+				color: rgb(129, 141, 179);
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			footer {
+				height: 40px;
+				background-color: rgb(129, 141, 179);
+				text-align: center;
+				padding-top: 20px;
+				color: rgb(211, 218, 240);
 			}
     </style>
 </head>
@@ -23,7 +67,7 @@
     <div id="container">
 
         <!-- Brand of website -->
-        <header>My Web Site Brand</header>
+        <header style="font-size: 60px; color: #fff">My Web Site Brand</header>
 
         <!-- Main navigation -->
         <nav>
