@@ -37,7 +37,7 @@ nav {
   padding-top: 2px;
 }
 main {
-  height: 400px; /* apply fixed height for demo purpose only */
+
 }
 main h1 { /* contextual selector - parent child */
   color: rgb(129, 141, 179);
