@@ -1,0 +1,52 @@
+/* CSS for headings across the site */
+body {
+  margin: auto;
+}
+
+.pages-heading {
+  background: url(https://www.petfinder.com/sites/default/files/styles/hero_image_1438_410/public/images/content/1440%20hero%20image_0.jpg?itok=vBK-eULc) no-repeat;
+  background-size: 100%;
+  height: 350px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px; 
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pages-nav {
+  background-color: rgb(255, 245, 238);
+  height: 50px;
+  text-align: center;
+  padding-top: 2px;
+}
+
+.pages-nav li {
+  list-style-type: none;
+  display: inline;
+  padding: 0 20px;
+}
+
+.pages-nav a {
+  text-decoration: none;
+}
+
+.pages-nav a:link {
+  color: #000; /* before click */
+}
+
+.pages-nav a:visited {
+  color: #818db3; /* after click */
+}
+
+.pages-nav a:hover {
+  color: #333; /* mouse over */
+}
+
+.pages-nav a:active {
+  color: #753a30; /* mouse down */
+}
+
+
+
