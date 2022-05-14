@@ -3,14 +3,16 @@
   flex-direction: column;
 }
 
-.first-row, .second-row {
+.first-row,
+.second-row {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   margin-bottom: 10px;
 }
 
-.first-row > div, .second-row > div {
+.first-row > div,
+.second-row > div {
   border-radius: 8px;
   box-shadow: 0 0 4px #b3b3b3, inset 0 0 1px #dfdfdf;
   padding: 10px;

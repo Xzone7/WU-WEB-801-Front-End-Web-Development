@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Pet Adopation Home Page</title>
+    <link rel="stylesheet" href="../styles/search-nearby.css" />
     <link rel="stylesheet" href="../styles/index.css" />
   </head>
 
@@ -24,27 +25,27 @@
 
       <!-- Main Content -->
       <main>
-        <div class="main-intro">
+        <div class="sn-main-intro">
           <h2>Adopt the Perfect Pet on Your Region</h2>
           <form action="/search" method="post">
             <fieldset>
               <legend>Find Nearby Adopation</legend>
-              <label>Enter Location</label><br>
-              <input type="text" name="location"><br>
-              <label>Enter Breed</label><br>
-              <input type="text" name="breed"><br>
-              <br><label>Gender</label><br>
+              <label>Enter Location</label>
+              <input type="text" name="location">
+              <label>Enter Breed</label>
+              <input type="text" name="breed">
+              <label>Gender</label>
               <input type="radio" name="gender" value="male">Male</input>
-              <input type="radio" name="gender" value="female">Female</input><br>
-              <br><label>Age</label><br>
+              <input type="radio" name="gender" value="female">Female</input>
+              <label>Age</label>
               <select>
                 <option>Puppy</option>
                 <option>Young</option>
                 <option>Adult</option>
                 <option>Senior</option>
-              </select><br>
-              <br><label>Special Requirment</label><br>
-              <textarea cols="30" rows="5"></textarea><br>
+              </select>
+              <label>Special Requirment</label>
+              <textarea cols="30" rows="5"></textarea>
               <input type="submit" value="search">
             </fieldset>
           </form>

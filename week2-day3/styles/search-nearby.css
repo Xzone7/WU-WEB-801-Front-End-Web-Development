@@ -1,0 +1,26 @@
+.sn-main-intro label {
+  display: block;
+  margin: 15px 0 0 0;
+}
+
+.sn-main-intro input {
+  width: 300px;
+}
+
+.sn-main-intro input[type="radio"] {
+  width: 25px;
+}
+
+.sn-main-intro textarea {
+  width: 300px;
+}
+
+.sn-main-intro input[type="submit"] {
+  display: block;
+  margin: 20px 0 10px 0;
+  width: 100px;
+}
+
+.sn-main-intro select {
+  width: 150px;
+}
