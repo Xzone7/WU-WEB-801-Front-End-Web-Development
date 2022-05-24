@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My First Web Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Container to wrap everything -->
+    <div id="container">
+      <!-- Brand of website -->
+      <header>My Web Site Brand</header>
+
+      <!-- Main navigation -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="page2.html">About</a></li>
+          <li><a href="page4.html">Gallery</a></li>
+          <li><a href="page3.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Main content area -->
+      <main>
+        <h1>My Fourth Heading</h1>
+        <p>My Fourth Paragraph</p>
+        <ul id="album">
+          <!-- <li id="photo"><img src="images/winterland1.jpg" alt=""></li>
+          <li id="photo"><img src="images/winterland2.jpg" alt=""></li>
+          <li id="photo"><img src="images/winterland3.jpg" alt=""></li>
+          <li id="photo"><img src="images/winterland4.jpg" alt=""></li>
+          <li id="photo"><img src="images/winterland5.jpg" alt=""></li>
+          <li id="photo"><img src="images/winterland6.jpg" alt=""></li> -->
+        </ul>
+      </main>
+
+      <!-- Footer information -->
+      <footer>&copy; Copyright 2022 My Website Name</footer>
+    </div>
+    <!-- End Container -->
+
+    <script>
+      var photos = [];  //Declare an empty array to stroe image element
+      var fileName = [];  //Declare an empty element to store image file names
+      var imageList = []; //Declare an empty array to store html list that contain an image
+      var image;  //Declare an empty variable to store the assembled image list codes
+      var openList = "<li id='photo'>"; //Declare a variable to contain open list tag
+      var closeList = "</li>"; //Declare a variable to contain close list tag
+
+      //Create a loop to create 6 images starting with index of 0
+      for (var i = 0; i < 6; i++) {
+        fileName.push("winterland" + (i+1)); //Create image file name and store in the array
+        photos.push("<img src='images/" + fileName[i] + ".jpg'>"); //Assemble file name into image element and store in an array
+        image = openList + photos[i] + closeList; //Assemble image element from array with list elements and store in variable
+        imageList.push(image); //Store(push) the assembled list codes into an array
+      }
+
+      //Display all six image codes stored in the array
+      document.getElementById("album").innerHTML = imageList.join("");
+    </script>
+  </body>
+</html>
