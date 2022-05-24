@@ -57,8 +57,9 @@ main h1 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-main #album #photo img {
+main #album li img {
   width: 400px;
+  height: 266px;
 }
 
 footer {
@@ -118,4 +119,48 @@ input[type="submit"] {
   display: block;
   margin: 20px 0 10px 0;
   width: 100px;
+}
+
+/* Page 4 */
+main #album li {
+  display: inline-block;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+main #album li img:hover {
+  cursor: pointer;
+}
+
+main #album li .caption {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+main #album li .description {
+  position: absolute;
+  top: 108px;
+  left: 70px;
+  visibility: hidden;
+  cursor: pointer;
+  width: 300px;
+  height: 50px;
+  background: #fff;
+  opacity: 0.7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main #album li .description span:first-letter {
+  text-transform: uppercase;
+}
+
+main #album li .description:hover {
+  visibility: visible;
+}
+
+main #album li img:hover ~ .description {
+  visibility: visible;
 }

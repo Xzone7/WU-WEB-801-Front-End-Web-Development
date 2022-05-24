@@ -43,60 +43,18 @@
     <!-- End Container -->
 
     <script>
-      var photos = []; //Declare an empty array to stroe image element
-      var fileName = []; //Declare an empty element to store image file names
+      var photos = [];  //Declare an empty array to stroe image element
+      var fileName = [];  //Declare an empty element to store image file names
       var imageList = []; //Declare an empty array to store html list that contain an image
-      var image; //Declare an empty variable to store the assembled image list codes
-      var openList = "<li "; //Declare a variable to contain open list tag
+      var image;  //Declare an empty variable to store the assembled image list codes
+      var openList = "<li id='photo'>"; //Declare a variable to contain open list tag
       var closeList = "</li>"; //Declare a variable to contain close list tag
-      var openCaption = "<figcaption class='caption'>";
-      var closeCaption = "</figcaption>";
-      var imageCaption = [
-        "pink tree",
-        "house on the hill",
-        "road to mountain",
-        "gree tree",
-        "beach and mountain",
-        "terraced fields",
-        "lake and mountain",
-        "frozen lake",
-        "arch bridge",
-        "arch bridge with light",
-        "sky and mountain",
-        "sunset and stone",
-      ];
-      var openDescTag = "<div class='description'><span>";
-      var closeDescTag = "</span></div>";
-      var imageDescription = [
-        "pink tree in the wild",
-        "abode of the hobbit",
-        "you can't hide from darkness",
-        "it's fishing time",
-        "a morning run would be perfect",
-        "step on the marshmallow",
-        "calm lake",
-        "feeling chill with the sun",
-        "scenes from the lord of the ring",
-        "front yard of my house",
-        "fist of the first man",
-        "find the secret inside the stone",
-      ];
 
-      //Create a loop to create 12 images starting with index of 0
-      for (var i = 0; i < 12; i++) {
-        fileName.push("landscape-" + (i + 1)); //Create image file name and store in the array
-        photos.push("<img src='images/" + fileName[i] + ".jpeg'>"); //Assemble file name into image element and store in an array
-        image =
-          openList +
-          `id="photo${i + 1}">` +
-          photos[i] +
-          openCaption +
-          imageCaption[i] +
-          closeCaption +
-          openDescTag +
-          imageDescription[i] +
-          closeDescTag +
-          closeList; //Assemble image element from array with list elements and store in variable
+      //Create a loop to create 6 images starting with index of 0
+      for (var i = 0; i < 6; i++) {
+        fileName.push("winterland" + (i+1)); //Create image file name and store in the array
+        photos.push("<img src='images/" + fileName[i] + ".jpg'>"); //Assemble file name into image element and store in an array
+        image = openList + photos[i] + closeList; //Assemble image element from array with list elements and store in variable
         imageList.push(image); //Store(push) the assembled list codes into an array
       }
 
