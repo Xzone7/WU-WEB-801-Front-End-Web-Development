@@ -1,0 +1,176 @@
+/* CSS for headings across the site */
+body {
+  margin: auto;
+}
+
+.pages-heading {
+  background: url(https://www.petfinder.com/sites/default/files/styles/hero_image_1438_410/public/images/content/1440%20hero%20image_0.jpg?itok=vBK-eULc)
+    no-repeat;
+  background-size: 100%;
+  height: 350px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pages-nav {
+  background-color: rgb(255, 245, 238);
+  height: 50px;
+  text-align: center;
+  padding-top: 2px;
+}
+
+.pages-nav li {
+  list-style-type: none;
+  display: inline;
+  padding: 0 20px;
+}
+
+.pages-nav a {
+  text-decoration: none;
+}
+
+.pages-nav a:link {
+  color: #000; /* before click */
+}
+
+.pages-nav a:visited {
+  color: #818db3; /* after click */
+}
+
+.pages-nav a:hover {
+  color: #333; /* mouse over */
+}
+
+.pages-nav a:active {
+  color: #753a30; /* mouse down */
+}
+
+main {
+  padding: 15px;
+}
+
+footer {
+  height: 40px;
+  background-color: rgb(129, 141, 179);
+  text-align: center;
+  padding-top: 20px;
+  color: rgb(211, 218, 240);
+}
+
+/* index.html only */
+
+.index-main-intro p {
+  font-family: "Nexa-Regular", Helvetica, Arial, sans-serif;
+}
+
+.index-main-intro span {
+  display: block;
+}
+
+.index-main-contact table,
+caption,
+th,
+td {
+  border: 1px solid #000;
+}
+
+.index-main-contact th,
+td {
+  width: 150px;
+  height: 35px;
+  text-align: center;
+}
+
+.index-main-contact caption {
+  text-transform: uppercase;
+  font-weight: 600;
+  height: 40px;
+  padding-top: 15px;
+  color: #753a30;
+}
+
+/* Search-nearby Pgae */
+.sn-main-intro label {
+  display: block;
+  margin: 15px 0 0 0;
+}
+
+.sn-main-intro input {
+  width: 300px;
+}
+
+.sn-main-intro input[type="radio"] {
+  width: 25px;
+}
+
+.sn-main-intro textarea {
+  width: 300px;
+}
+
+.sn-main-intro input[type="submit"] {
+  display: block;
+  margin: 20px 0 10px 0;
+  width: 100px;
+}
+
+.sn-main-intro select {
+  width: 150px;
+}
+
+/* Picture-list Pgae */
+main #album {
+  margin-left: 100px;
+}
+
+main #album li {
+  display: inline-block;
+  margin-bottom: 30px;
+  position: relative;
+  padding: 0 20px;
+}
+
+main #album li img:hover {
+  cursor: pointer;
+}
+
+main #album li .caption {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+main #album li .description {
+  position: absolute;
+  top: 108px;
+  left: 70px;
+  visibility: hidden;
+  cursor: pointer;
+  width: 300px;
+  height: 50px;
+  background: #fff;
+  opacity: 0.7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main #album li .description span:first-letter {
+  text-transform: uppercase;
+}
+
+main #album li .description:hover {
+  visibility: visible;
+}
+
+main #album li img:hover ~ .description {
+  visibility: visible;
+}
+
+main #album li img {
+  width: 400px;
+  height: 266px;
+}
