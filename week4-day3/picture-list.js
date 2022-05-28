@@ -65,8 +65,8 @@ const createImageList = () => {
 const setInfoModal = () => {
   const descriptionBox = document.querySelectorAll(".description");
   if (descriptionBox.length > 0) {
-    descriptionBox.forEach(element => {
-      element.addEventListener("click", event => {
+    descriptionBox.forEach((element) => {
+      element.addEventListener("click", (event) => {
         // get current click image data
         const imageDescription = event.currentTarget.textContent;
         const imageCaption = event.currentTarget.previousSibling.innerHTML;
@@ -86,20 +86,20 @@ const setInfoModal = () => {
 const closeModal = () => {
   const modalButton = document.getElementById("modal-button");
   modalButton.addEventListener("click", () => {
-      document.getElementById("modal-wrapper").style.visibility = "hidden";
+    document.getElementById("modal-wrapper").style.visibility = "hidden";
   });
-}
+};
 
 /* Function to add modal out side click event listener */
 const outSideClicker = () => {
   const modalWrapper = document.getElementById("modal-wrapper");
-  modalWrapper.addEventListener("click", event => {
+  modalWrapper.addEventListener("click", (event) => {
     const clickedTargetElement = event.target;
     if (clickedTargetElement.id === "modal-wrapper") {
       document.getElementById("modal-wrapper").style.visibility = "hidden";
     }
   });
-}
+};
 
 createImageList();
 setInfoModal();
