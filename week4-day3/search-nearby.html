@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pet Adopation Home Page</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <!-- Container to wrap everything -->
+    <div id="container">
+      <!-- Brand of website -->
+      <header class="pages-heading">
+        <h1>Welcome to Pet Adopation Service</h1>
+      </header>
+      <!-- Main Navigation -->
+      <nav class="pages-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="picture-list.html" id="ad-list">Adopation List</a></li>
+          <li><a href="search-nearby.html">Seach Nearby Adopation</a></li>
+        </ul>
+      </nav>
+      <!-- End Main Navigation -->
+
+      <!-- Main Content -->
+      <main>
+        <div class="sn-main-intro">
+          <h2>Adopt the Perfect Pet on Your Region</h2>
+          <form action="/search" method="post">
+            <fieldset>
+              <legend>Find Nearby Adopation</legend>
+              <label>Enter Location</label>
+              <input type="text" name="location">
+              <label>Enter Breed</label>
+              <input type="text" name="breed">
+              <label>Gender</label>
+              <input type="radio" name="gender" value="male">Male</input>
+              <input type="radio" name="gender" value="female">Female</input>
+              <label>Age</label>
+              <select>
+                <option>Puppy</option>
+                <option>Young</option>
+                <option>Adult</option>
+                <option>Senior</option>
+              </select>
+              <label>Special Requirment</label>
+              <textarea cols="30" rows="5"></textarea>
+              <input type="submit" value="search">
+            </fieldset>
+          </form>
+      </main>
+      <!-- End Main Content -->
+
+      <!-- Footer Information -->
+      <footer>&copy; Xu Chen - Copyright 2022</footer>
+    </div>
+    <!-- End Container -->
+  </body>
+</html>
