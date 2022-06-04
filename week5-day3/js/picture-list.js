@@ -42,7 +42,7 @@ const createImageList = () => {
   //Create a loop to create 12 images starting with index of 0
   for (var i = 0; i < 12; i++) {
     fileName.push("pet-" + (i + 1)); //Create image file name and store in the array
-    photos.push("<img src='images/" + fileName[i] + ".jpeg'>"); //Assemble file name into image element and store in an array
+    photos.push("<img src='images/" + fileName[i] + ".jpeg' alt=" + imageCaption[i] + ">"); //Assemble file name into image element and store in an array
     image =
       openList +
       `id="photo${i + 1}">` +
@@ -76,7 +76,7 @@ const setInfoModal = () => {
         document.getElementById("modal-content").innerHTML = imageDescription;
 
         // set modal visibility
-        document.getElementById("modal-wrapper").style.visibility = "visible";
+        document.getElementById("modal-wrapper").style.display = "block";
       });
     });
   }
@@ -86,22 +86,46 @@ const setInfoModal = () => {
 const closeModal = () => {
   const modalButton = document.getElementById("modal-button");
   modalButton.addEventListener("click", () => {
-    document.getElementById("modal-wrapper").style.visibility = "hidden";
+    document.getElementById("modal-wrapper").style.display = "none";
   });
 };
 
 /* Function to add modal out side click event listener */
-const outSideClicker = () => {
-  const modalWrapper = document.getElementById("modal-wrapper");
+const outSideClicker = (id) => {
+  const modalWrapper = document.getElementById(id);
   modalWrapper.addEventListener("click", (event) => {
     const clickedTargetElement = event.target;
-    if (clickedTargetElement.id === "modal-wrapper") {
-      document.getElementById("modal-wrapper").style.visibility = "hidden";
+    if (clickedTargetElement.id === id) {
+      document.getElementById(id).style.display = "none";
     }
   });
 };
 
 createImageList();
 setInfoModal();
-outSideClicker();
+outSideClicker("modal-wrapper");
 closeModal();
+
+/* Jquery Practice */
+$(document).ready(() => {
+  $("#album img").click((event) => {
+    $("#backdrop")
+      .animate({ opacity: ".50" }, 300, "linear")
+      .css("display", "block");
+    $("#box").fadeIn();
+
+    // Clear up
+    if ($("#box").contents("img")) {
+      $("#box").contents().remove("img"); 
+    }
+
+    $("#box").append(event.target.cloneNode());
+  });
+
+  $('#close, #backdrop').click(function(){
+    $('#backdrop').animate({'opacity':'0'}, 300, 'linear', () => {
+        $('#backdrop').css('display', 'none');
+    });
+    $('#box').fadeOut();
+});
+});

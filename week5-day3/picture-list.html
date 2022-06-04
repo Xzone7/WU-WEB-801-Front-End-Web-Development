@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Adopation List</title>
+    <link rel="stylesheet" href="./styles.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Container to wrap everything -->
+    <div id="container">
+      <!-- Brand of website -->
+      <header class="pages-heading">
+        <h1>Welcome to Pet Adopation Service</h1>
+      </header>
+      <!-- Main Navigation -->
+      <nav class="pages-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="picture-list.html" id="ad-list">Adopation List</a></li>
+          <li><a href="search-nearby.html">Seach Nearby Adopation</a></li>
+        </ul>
+      </nav>
+      <!-- End Main Navigation -->
+
+      <!-- Main Content -->
+      <main>
+        <!-- Modal default visibility: hidden -->
+        <div id="modal-wrapper">
+          <div id="modal">
+            <div>
+              <h2 id="modal-heading"></h2>
+            </div>
+            <div>
+              <p id="modal-content"></p>
+            </div>
+            <div id="modal-button-wrapper">
+              <span id="modal-button"> Click This To Close </span>
+            </div>
+          </div>
+        </div>
+
+        <h2>Featured Pets</h2>
+        <ul id="album"></ul>
+
+
+        <!-- Image LightBox -->
+        <div id="backdrop"></div>
+
+        <div id="box">
+          <div id="close">x</div>
+        </div>
+
+        </div>
+      </main>
+      <!-- End Main Content -->
+
+      <!-- Footer Information -->
+      <footer>
+        &copy; <a href="https://www.adoptapet.com/">www.adoptapet.com</a> -
+        Copyright 2022
+      </footer>
+    </div>
+    <!-- End Container -->
+
+    <script src="js/picture-list.js"></script>
+  </body>
+</html>
